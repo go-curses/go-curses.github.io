@@ -9,6 +9,7 @@
        background: #3463A7;
        color: #ffffff;
        font-family: monospace;
+       font-size: 16px;
        position: relative;
      }
      * {
@@ -19,36 +20,97 @@
        text-decoration: none;
      }
      main {
-       height: 99vh;
-       width: 99vw;
+       /* height: 99vh;
+          width: 99vw; */
        position: relative;
      }
-     main div {
+     header {
+       position: absolute;
+       top: 0;
+       left: 50%;
+       display: block;
+       background: #3463A7;
+       transform: translate(-50%,-50%);
+       z-index: 100;
+     }
+     section {
+       display: block;
+       width: 90vw;
+       height: 80vh;
+       border: 1px solid #ffffff;
+       margin: 5vh auto;
+       overflow: hidden;
+       position: relative;
+     }
+     section div.contents {
+       display: block;
+       width: 110px;
+       height: 66px;
        position: absolute;
        top: 50%;
        left: 50%;
        transform: translate(-50%, -50%);
+     }
+     img.logo:hover {
+       content: url(./curses-button-logo-pressed.png);
+     }
+     footer {
+       display: block;
+       width: 90vw;
+       height: vh;
+       margin: 0 auto;
        text-align: center;
+     }
+     footer div {
+       display: inline-block;
+     }
+     @media screen and (max-width: 500px) {
+       footer div {
+         display: block;
+         width: 100%;
+       }
      }
     </style>
   </head>
   <body>
     <main>
-      <div>
-        <img class="logo" src="./curses-button-logo.png" />
-        <br />
-        <br />
-        <a href="http://golang.org" rel="nofollow">
-          <img src="https://img.shields.io/badge/Made%20with-Go-880300.svg" alt="made with Go" style="max-width: 100%;">
-          <img src="https://img.shields.io/badge/Go-v1.16+-880300.svg" alt="Go version" style="max-width: 100%;" />
-        </a>
-        <br />
-        <a href="http://github.com/go-curses/cdk" rel="nofollow"><img src="https://img.shields.io/badge/Github-CDK-880300.svg" alt="CDK Github" style="max-width: 100%;"></a>
-        <a href="https://pkg.go.dev/github.com/go-curses/cdk"><img src="https://img.shields.io/badge/Go%20Doc-CDK-880300.svg" alt="CDK Go Reference" title="CDK Go Reference" style="max-width: 100%;" /></a>
-        <br />
-        <a href="http://github.com/go-curses/ctk" rel="nofollow"><img src="https://img.shields.io/badge/Github-CTK-880300.svg" alt="CDK Github" style="max-width: 100%;"></a>
-        <a href="https://pkg.go.dev/github.com/go-curses/ctk"><img src="https://img.shields.io/badge/Go%20Doc-CTK-880300.svg" alt="CDK Go Reference" title="CTK Go Reference" style="max-width: 100%;" /></a>
-      </div>
+      <header>Hello World</header>
+      <section>
+        <div class="contents">
+          <img class="logo" src="./curses-button-logo.png" />
+        </div>
+      </section>
+      <footer>
+        <div class="go">
+          <a href="http://golang.org" rel="nofollow">
+            <img src="https://img.shields.io/badge/Made%20with-Go-880300.svg"
+                 alt="made with Go" title="made with Go" />
+            <img src="https://img.shields.io/badge/Go-v1.16+-880300.svg"
+                 alt="Go version 1.16 (or greater)"
+                 title="Go version 1.16 (or greater)" />
+          </a>
+        </div>
+        <div class="cdk">
+          <a href="http://github.com/go-curses/cdk" rel="nofollow">
+            <img src="https://img.shields.io/badge/CDK-Github-880300.svg"
+                 alt="CDK Github" title="CTK Go Reference" />
+          </a>
+          <a href="https://pkg.go.dev/github.com/go-curses/cdk" rel="nofollow">
+            <img src="https://img.shields.io/badge/CDK-Go%20Doc-880300.svg"
+                 alt="CDK Go Documentation" title="CDK Go Reference" />
+          </a>
+        </div>
+        <div class="ctk">
+          <a href="http://github.com/go-curses/ctk" rel="nofollow">
+            <img src="https://img.shields.io/badge/CTK-Github-880300.svg"
+                 alt="CTK Github" title="CTK Github" />
+          </a>
+          <a href="https://pkg.go.dev/github.com/go-curses/ctk" rel="nofollow">
+            <img src="https://img.shields.io/badge/CTK-Go%20Doc-880300.svg"
+                 alt="CTK Go Reference" title="CTK Go Reference" />
+          </a>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
